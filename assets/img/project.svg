@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Let's collaborate">
+  <rect width="300" height="300" fill="transparent"/>
+  <circle cx="100" cy="120" r="40" fill="#fff" opacity="0.9"/>
+  <circle cx="200" cy="120" r="40" fill="#fff" opacity="0.9"/>
+  <rect x="70" y="180" width="60" height="80" fill="#fff" opacity="0.85" rx="8"/>
+  <rect x="170" y="180" width="60" height="80" fill="#fff" opacity="0.85" rx="8"/>
+  <path d="M120 160 L180 160" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M150 160 L150 200" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="150" cy="230" r="20" fill="#fff" opacity="0.9"/>
+  <text x="150" y="236" text-anchor="middle" fill="#8b6cf6" font-family="Poppins, sans-serif" font-size="18" font-weight="600">+</text>
+</svg>

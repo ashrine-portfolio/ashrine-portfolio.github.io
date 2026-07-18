@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="Digital feedback platform">
+  <rect width="400" height="280" fill="#f0fdf4" rx="16"/>
+  <rect x="60" y="40" width="280" height="200" fill="#fff" rx="12" stroke="#10b981" stroke-width="2"/>
+  <rect x="80" y="70" width="100" height="60" fill="#d1fae5" rx="8"/>
+  <rect x="200" y="70" width="120" height="12" fill="#6ee7b7" rx="4"/>
+  <rect x="200" y="92" width="100" height="8" fill="#a7f3d0" rx="4"/>
+  <rect x="200" y="108" width="80" height="8" fill="#a7f3d0" rx="4"/>
+  <rect x="80" y="150" width="240" height="8" fill="#a7f3d0" rx="4"/>
+  <rect x="80" y="168" width="200" height="8" fill="#a7f3d0" rx="4"/>
+  <rect x="80" y="186" width="160" height="8" fill="#a7f3d0" rx="4"/>
+  <circle cx="130" cy="100" r="16" fill="#10b981"/>
+  <path d="M124 100 L128 104 L136 96" stroke="#fff" stroke-width="2" fill="none"/>
+</svg>

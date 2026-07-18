@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Majida Majeed profile">
+  <defs>
+    <linearGradient id="profileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b6cf6"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#profileGrad)" rx="20"/>
+  <circle cx="100" cy="78" r="38" fill="#f8fafc" opacity="0.95"/>
+  <ellipse cx="100" cy="168" rx="58" ry="42" fill="#f8fafc" opacity="0.95"/>
+  <text x="100" y="190" text-anchor="middle" fill="#fff" font-family="Poppins, sans-serif" font-size="14" font-weight="600">MM</text>
+</svg>
