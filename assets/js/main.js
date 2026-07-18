@@ -200,92 +200,24 @@ themeButton.addEventListener('click', function handleThemeToggle() {
 });
 
 /*==================== CONTACT FORM (FORMCARRY) ====================*/
-const FORMCARRY_ENDPOINT = 'https://formcarry.com/s/04arZNb9Ctc';
-const CONTACT_FORM_STATUS = {
-    IDLE: 'idle',
-    LOADING: 'loading',
-    SUCCESS: 'success',
-    ERROR: 'error',
-};
-
+/* Native POST to FormCarry — matches FormCarry embed (no fetch/CORS). */
 const contactForm = document.getElementById('contact-form');
 const contactFormStatus = document.getElementById('contact-form-status');
 const contactFormSubmit = document.getElementById('contact-form-submit');
 
-function setContactFormStatus(statusType, message) {
-    if (!contactFormStatus) {
-        return;
+function setContactFormSubmitting() {
+    if (contactFormStatus) {
+        contactFormStatus.hidden = false;
+        contactFormStatus.textContent = 'Sending your message...';
+        contactFormStatus.className = 'contact__status contact__status--loading';
     }
 
-    contactFormStatus.hidden = false;
-    contactFormStatus.textContent = message;
-    contactFormStatus.className = 'contact__status contact__status--' + statusType;
-}
-
-function resetContactFormStatus() {
-    if (!contactFormStatus) {
-        return;
-    }
-
-    contactFormStatus.hidden = true;
-    contactFormStatus.textContent = '';
-    contactFormStatus.className = 'contact__status';
-}
-
-function setContactFormLoading(isLoading) {
-    if (!contactFormSubmit) {
-        return;
-    }
-
-    contactFormSubmit.disabled = isLoading;
-    contactFormSubmit.setAttribute('aria-busy', isLoading ? 'true' : 'false');
-}
-
-async function handleContactFormSubmit(event) {
-    event.preventDefault();
-
-    if (!contactForm) {
-        return;
-    }
-
-    resetContactFormStatus();
-    setContactFormLoading(true);
-    setContactFormStatus(CONTACT_FORM_STATUS.LOADING, 'Sending your message...');
-
-    const formData = new FormData(contactForm);
-
-    try {
-        const response = await fetch(FORMCARRY_ENDPOINT, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                Accept: 'application/json',
-            },
-        });
-
-        const responseData = await response.json();
-
-        if (!response.ok || responseData.code !== 200) {
-            const errorMessage = responseData.message || 'Something went wrong. Please try again.';
-            setContactFormStatus(CONTACT_FORM_STATUS.ERROR, errorMessage);
-            return;
-        }
-
-        contactForm.reset();
-        setContactFormStatus(
-            CONTACT_FORM_STATUS.SUCCESS,
-            'Thank you! Your message has been sent successfully.'
-        );
-    } catch (error) {
-        setContactFormStatus(
-            CONTACT_FORM_STATUS.ERROR,
-            'Unable to send your message. Please check your connection and try again.'
-        );
-    } finally {
-        setContactFormLoading(false);
+    if (contactFormSubmit) {
+        contactFormSubmit.disabled = true;
+        contactFormSubmit.setAttribute('aria-busy', 'true');
     }
 }
 
 if (contactForm) {
-    contactForm.addEventListener('submit', handleContactFormSubmit);
+    contactForm.addEventListener('submit', setContactFormSubmitting);
 }
