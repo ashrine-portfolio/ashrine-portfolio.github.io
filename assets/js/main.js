@@ -200,7 +200,7 @@ themeButton.addEventListener('click', function handleThemeToggle() {
 });
 
 /*==================== CONTACT FORM (FORMCARRY) ====================*/
-const FORMCARRY_ENDPOINT = 'https://formcarry.com/s/jg0E2d7wY5O';
+const FORMCARRY_ENDPOINT = 'https://formcarry.com/s/04arZNb9Ctc';
 const CONTACT_FORM_STATUS = {
     IDLE: 'idle',
     LOADING: 'loading',

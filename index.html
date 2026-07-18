@@ -665,14 +665,12 @@
 
                 <form
                     id="contact-form"
-                    action="https://formsubmit.co/AshrineRhema.22@gmail.com"
+                    action="https://formcarry.com/s/04arZNb9Ctc"
                     method="POST"
+                    enctype="multipart/form-data"
                     class="contact__form grid"
                     data-testid="contact-form"
                 >
-                    <input type="hidden" name="_subject" value="Portfolio message for Ashrine Justin">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="contact-name" class="contact__label">Name</label>
@@ -691,6 +689,14 @@
                         <label for="contact-message" class="contact__label">Message</label>
                         <textarea name="message" id="contact-message" cols="0" rows="7" class="contact__input" required></textarea>
                     </div>
+                    <p
+                        id="contact-form-status"
+                        class="contact__status"
+                        role="status"
+                        aria-live="polite"
+                        data-testid="contact-form-status"
+                        hidden
+                    ></p>
                     <div>
                         <button type="submit" id="contact-form-submit" class="button button--flex">
                             Send Message
